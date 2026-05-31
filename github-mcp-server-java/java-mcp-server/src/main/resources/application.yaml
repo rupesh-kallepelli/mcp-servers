@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: java-mcp-server
+  ai:
+    mcp:
+      server:
+#        comment below for making server STDIO
+        protocol: STREAMABLE
+        enabled: true
+        name: my-file-server
+        version: 1.0.0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

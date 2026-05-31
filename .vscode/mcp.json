@@ -6,7 +6,21 @@
       "headers": {
         "Authorization": "Bearer ${input:github_mcp_pat}"
       }
-    }
+    },
+    "my_file_tools": {
+      "url": "http://localhost:8080/mcp",
+      "type": "http"
+    },
+    "rupesh_file_tools": {
+      "command": "java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dspring.main.web-application-type=none",
+        "-Dlogging.pattern.console=",
+        "-jar",
+        "C:/Users/kalle/development/mcp-servers/github-mcp-server-java/java-mcp-server/target/java-mcp-server-0.0.1-SNAPSHOT.jar"
+      ]
+    },
   },
   "inputs": [
     {
